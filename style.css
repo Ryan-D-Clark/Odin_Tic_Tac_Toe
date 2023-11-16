@@ -1,97 +1,153 @@
-html, body {
-    margin: 0px;
-    padding: 0px;
-    background-color: black;
-  }
-
-#alert-container{
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%; 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2; 
-    cursor: pointer;
-
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html { 
+    background-color: #000;
+ } 
+body {
+    min-height: 100vh;
+    background-color: #352F44; 
+    overflow: hidden;
 }
 
-.alert-message{
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #352F44;
+    color: #B9B4C7;
+    text-align: center;
+    z-index: 11;
+}
+::backdrop{
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#gameForm{
+    z-index: 10;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+    background-color: #B9B4C7;
+    left: 0; 
+    right: 0; 
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    color: #352F44;
+}
+
+#closeForm{
+    background-color: #352F44;
+    margin: 20px;
+    padding: 20px;
+    color: #B9B4C7;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#gameForm input{
+    background-color: #352F44;
+    color: #B9B4C7;
+    padding: 2px;
+}
+
+#formTitle{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#heading{
+    font-size: 2rem;
+    border-top: 2px solid;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#difficultyHeading{
+    padding: 10px;
+    font-size: 2rem;
+}
+
+#difficultiesContainer{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    cursor: pointer;
+}
+
+header{
+    background-color: #B9B4C7;
+    color:#5C5470;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#content{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     text-align: center;
 }
 
-#player-error{
-    display: none;
+#player{
+    flex-grow: 1;
 }
 
-#game-winner{
-    display: none;
+#computer{
+    flex-grow: 1;
 }
 
-#round-winner{
-    display: none;
-}
-
-#round-draw{
-    display: none;
-}
-
-
-
-.tile{
-    border: 4px solid white;
-    min-width: 100px;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    cursor: pointer;
-    background-color: black;
-    color: red;
+.statContainer{
+    padding: 0px 0px 30% 0px;
+    color: #B9B4C7;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 #board{
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
-    max-width: 300px;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #5C5470;
+    min-width: 100px;
+    min-height: 100px;
+    font-size: 50px;
+    cursor: pointer;
+    color: #5C5470;
 }
 
-#head-container{
-    height: 100px;
-    border: 5px solid white;
-    margin-bottom: 100px;
-    grid-template-columns: 33% 33% 33%;
-    display: grid;
-    color: white;
+main{
+    background-color: #352F44;
 }
 
-.info-container{
+#dialogContainer{
     margin: auto;
+    background-color: transparent;
+    border: transparent !important;
+
+}
+
+#dialog{
+    font-size: 4rem;
+    color: #B9B4C7;
     text-align: center;
+    border: transparent !important;
+    padding: 5px;
 }
 
-#head-divider{
-    border-bottom: 100px solid white;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    height: 0px;
-    width: 100%;
-}
-
-#divider{
-    color: white;
-}
 

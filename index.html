@@ -9,34 +9,57 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    <div id="alert-container">
-        <div class="alert-message" id="player-error">Oops, you've clicked on a played spot!<br><br><br>Click to continue...</div>
-        <div class="alert-message" id="game-winner">Game winner<br><br><br>Click to continue...</div>
-        <div class="alert-message" id="round-winner"></div>
-        <div class="alert-message" id="round-draw">No winners that round!<br><br><br>Click to continue...</div>
-    </div>
+    <form id="gameForm">
+        <br>
+        <div id="formTitle">Tic-Tac-Toe</div>
+        <br>
+        <p id="heading">Get Started</p>
+        <label for="playerNameInput">Player Name:</label>
+        <input  type="text" name="playerNameInput" id="playerNameInput" placeholder="John">
+        <br>
+        <p id="difficultyHeading">Difficulty</p>
+        <div id="difficultiesContainer">
+            <input type="radio" id="normal" name="difficulty" value="normal">
+            <label for="normal">Normal</label><br>
+            <input type="radio" id="hard" name="difficulty" value="hard">
+            <label for="hard">Hard</label><br>
+            <input type="radio" id="impossible" name="difficulty" value="impossible">
+            <label for="impossible">Impossible*</label> 
+        </div>
+        <button id="closeForm">Begin</button>
 
-    <div id="head-container">
-        <div class="info-container">
-            <div id="player-name" class="name">Test</div>
-            <div id="player-score" class="score">0</div>
+    </form>
+    <header>Tic-Tac-Toe</header>
+    <main>
+
+        <dialog id="dialogContainer">
+            <p id="dialog">Round Winner is<br>X</p>
+        </dialog>
+
+    <div id="content">
+        <div class="statContainer" id="player">
+            <div class ="name" id="playerName"></div>
+            <div id="playerScore" class="score">0</div>
         </div>
-        <div id="head-divider"></div>
-        <div class="info-container">
-            <div class="name">Computer</div>
-            <div id="bot-score" class="score">0</div>
+        <div id="board">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
         </div>
-    </div>
-    <div id="board">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-    </div>
+        <div class="statContainer" id="computer">
+            <div class="name" id="computerName">Computer</div>
+            <div id="computerScore" class="score">0</div>
+        </div>
+</div>
+</main>
+<div id="footer">
+    <p>*Ideally, you shouldn't win this difficulty</p>
+</div>
 </body>
 </html>
